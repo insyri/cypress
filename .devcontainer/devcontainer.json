@@ -1,35 +1,14 @@
 {
-	"name": "Kotlin",
-	"dockerFile": "Dockerfile",
-
-	// Set *default* container specific settings.json values on container create.
-	// "settings": { 
-	// 	"terminal.integrated.shell.linux": "/bin/bash",
-	// 	"java.home": "/docker-java-home"
-	// },
-	
-	// Add the IDs of extensions you want installed when the container is created.
+	"name": "Kotlin + Java",
+	"image": "mcr.microsoft.com/devcontainers/java:1",
 	"customizations": {
-        "vscode": {
-            "extensions": [
-                "redhat.java",
-                "vscjava.vscode-java-debug",
-                "fwcd.kotlin"
-            ]
-        }
-    },
-
-	"mounts": [
-		"source=extensions,target=/root/.vscode-server/extensions,type=volume",
-		"source=m2,target=/root/.m2,type=volume"	
-	]
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
-
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+		"vscode": {
+			"extensions": [
+				"redhat.java",
+				"vscjava.vscode-java-debug",
+				"fwcd.kotlin"
+			]
+		}
+  },	
+	"onCreateCommand": "sudo snap install --classic kotlin"
 }
