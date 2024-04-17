@@ -1,6 +1,6 @@
 {
 	"name": "Kotlin + Java",
-	"image": "mcr.microsoft.com/devcontainers/java:1",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -9,6 +9,14 @@
 				"fwcd.kotlin"
 			]
 		}
-  },	
-	"onCreateCommand": "sudo snap install --classic kotlin"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "21",
+			"jdkDistro": "open",
+			"installGradle": true,
+			"installMaven": true
+		}
+	},
+	"postAttachCommand": "sdk install kotlin && gradle && mvn && exit"
 }

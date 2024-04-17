@@ -1,4 +1,4 @@
 {
-    "kotlin.languageServer.enabled": false,
-    "kotlin.debugAdapter.enabled": false
+    "kotlin.languageServer.enabled": true,
+    "kotlin.debugAdapter.enabled": true,
 }
