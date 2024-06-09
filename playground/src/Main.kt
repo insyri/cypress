@@ -56,15 +56,20 @@ fun capitalize(str: String): String {
 
 
 
-//fun mathing(a: 69, b: 420): Int{
-//    var gay = true
-//    println("loading gay math")
-//
-//    if gay = true {
-//        var math_is_gay: Int = a + b
-//    }
-//    if gay = false {
-//        var math_isnt_gay: Int = a - b
-//    }
-//    println(Int)
-//}
+fun mathing(a: Int, b: Int, gay: Boolean): Int {
+    println("Loading gay math...")
+
+    if (gay) {
+        return a + b
+    } else {
+        return a - b
+    }
+}
+
+fun math() {
+    val a = 69
+    val b = 420
+    val gay = true
+    val result = mathing(a, b, gay)
+    println("Gay Level: $result")
+}
